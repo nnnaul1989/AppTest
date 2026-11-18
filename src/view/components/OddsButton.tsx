@@ -1,0 +1,1 @@
+export function OddsButton({label,price,selected,onClick}:{label:string;price?:number;selected?:boolean;onClick?:()=>void}){return <button className={`odds-button ${selected?'selected':''}`} onClick={onClick} disabled={price===undefined}><span>{label}</span><b>{price?.toFixed(2)??'—'}</b></button>;}

@@ -1,0 +1,2 @@
+import { CalendarDays,RefreshCw } from 'lucide-react';
+export function EmptyState({message,onRefresh}:{message?:string;onRefresh?:()=>void}){return <div className="empty-state"><span className="empty-icon"><CalendarDays size={24}/></span><h3>{message?'Chưa tải được dữ liệu':'Chưa có trận đấu nào'}</h3><p>{message??'Hiện chưa có trận Ngoại Hạng Anh nào trong lịch thi đấu sắp tới.'}</p>{onRefresh&&<button className="retry-button" onClick={onRefresh}><RefreshCw size={14}/>Thử tải lại</button>}</div>}
